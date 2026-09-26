@@ -58,11 +58,16 @@ nav{
 }
 
 .brand-logo {
-  width: 34px;
-  height: 34px;
+  width: 34px !important;
+  height: 34px !important;
+  max-width: 34px !important;
+  max-height: 34px !important;
+  min-width: 34px;
+  min-height: 34px;
   object-fit: contain;
   display: block;
   border-radius: 9px;
+  flex-shrink: 0;
 }
 
 .navlinks{
