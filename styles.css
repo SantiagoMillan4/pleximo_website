@@ -48,24 +48,21 @@ nav{
   justify-content:space-between;
 }
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-weight:750;
-  letter-spacing:-.02em;
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-weight: 750;
+  text-decoration: none;
 }
 
-.logo{
-  width:34px;
-  height:34px;
-  border-radius:10px;
-  background:var(--accent);
-  display:grid;
-  place-items:center;
-  color:white;
-  font-size:15px;
-  font-weight:800;
+.brand-logo {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  display: block;
+  border-radius: 9px;
 }
 
 .navlinks{
