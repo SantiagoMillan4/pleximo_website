@@ -20,33 +20,35 @@
 <body>
 
   <!-- HEADER -->
-  <header class="container">
-    <nav>
+  <header class="site-header">
+    <div class="container">
+      <nav>
 
-      <a class="brand" href="#">
-        <img src="logo.png" alt="Pleximo" class="brand-logo">
-        <span>Pleximo</span>
-      </a>
-
-      <div class="nav-right">
-
-        <div class="navlinks">
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#download">Download</a>
-        </div>
-
-        <a
-          class="language-switch"
-          href="fr.html"
-          aria-label="Afficher le site en français"
-        >
-          FR
+        <a class="brand" href="#">
+          <img src="logo.png" alt="Pleximo" class="brand-logo">
+          <span>Pleximo</span>
         </a>
 
-      </div>
+        <div class="nav-right">
 
-    </nav>
+          <div class="navlinks">
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#download">Download</a>
+          </div>
+
+          <a
+            class="language-switch"
+            href="fr.html"
+            aria-label="Afficher le site en français"
+          >
+            FR
+          </a>
+
+        </div>
+
+      </nav>
+    </div>
   </header>
 
 
@@ -127,7 +129,6 @@
 
       <div class="screenshots-scroll">
 
-        <!-- PORTFOLIO -->
         <article class="screenshot-item">
 
           <div class="screenshot-card">
@@ -152,7 +153,6 @@
         </article>
 
 
-        <!-- PROPERTY -->
         <article class="screenshot-item">
 
           <div class="screenshot-card">
@@ -177,7 +177,6 @@
         </article>
 
 
-        <!-- ANALYSIS -->
         <article class="screenshot-item">
 
           <div class="screenshot-card">
@@ -202,7 +201,6 @@
         </article>
 
 
-        <!-- SCENARIOS -->
         <article class="screenshot-item">
 
           <div class="screenshot-card">
@@ -227,7 +225,6 @@
         </article>
 
 
-        <!-- COMPARISON -->
         <article class="screenshot-item">
 
           <div class="screenshot-card">
@@ -280,86 +277,107 @@
       <div class="feature-grid">
 
         <article class="feature-card">
-          <div class="feature-icon">↻</div>
 
-          <h3>Refinancing scenarios</h3>
+          <div class="feature-title">
+            <div class="feature-icon">↻</div>
+            <h3>Refinancing scenarios</h3>
+          </div>
 
           <p>
             Explore a refinance with a ready-made scenario and compare
             the results with your current financing.
           </p>
+
         </article>
 
 
         <article class="feature-card">
-          <div class="feature-icon">⌂</div>
 
-          <h3>Borrowing capacity</h3>
+          <div class="feature-title">
+            <div class="feature-icon">⌂</div>
+            <h3>Borrowing capacity</h3>
+          </div>
 
           <p>
             Estimate your borrowing capacity with a calculator
             built directly into Pleximo.
           </p>
+
         </article>
 
 
         <article class="feature-card">
-          <div class="feature-icon">↗</div>
 
-          <h3>Property link import</h3>
+          <div class="feature-title">
+            <div class="feature-icon">↗</div>
+            <h3>Property link import</h3>
+          </div>
 
           <p>
             Add a property listing link and prefill available information
             to get your analysis started faster.
           </p>
+
         </article>
 
 
         <article class="feature-card">
-          <div class="feature-icon">$</div>
 
-          <h3>Canadian &amp; U.S. mortgages</h3>
+          <div class="feature-title">
+            <div class="feature-icon">$</div>
+            <h3>Canadian &amp; U.S. mortgages</h3>
+          </div>
 
           <p>
             Calculate mortgages using conventions adapted to
             Canadian and U.S. financing.
           </p>
+
         </article>
 
 
         <article class="feature-card">
-          <div class="feature-icon">⇧</div>
 
-          <h3>Tax summaries &amp; sharing</h3>
+          <div class="feature-title">
+            <div class="feature-icon">⇧</div>
+            <h3>Tax summaries &amp; sharing</h3>
+          </div>
 
           <p>
             Export tax summaries and share property or deal snapshots
             when you need them.
           </p>
+
         </article>
 
 
         <article class="feature-card">
-          <div class="feature-icon">⌁</div>
 
-          <h3>Charts &amp; insights</h3>
+          <div class="feature-title">
+            <div class="feature-icon">⌁</div>
+            <h3>Charts &amp; insights</h3>
+          </div>
 
           <p>
             Visualize income, expenses, cash flow, and performance
             through clear, useful charts.
           </p>
+
         </article>
 
 
         <article class="feature-card">
-          <div class="feature-icon">◐</div>
 
-          <h3>Themes &amp; customization</h3>
+          <div class="feature-title">
+            <div class="feature-icon">◐</div>
+            <h3>Themes &amp; customization</h3>
+          </div>
 
           <p>
             Choose from different themes and make Pleximo
             feel like your own.
           </p>
+
         </article>
 
       </div>
@@ -394,13 +412,19 @@
         <article class="pricing-card">
 
           <div class="pricing-card-top">
-            <span class="plan-name">Pleximo Free</span>
 
-            <h3>$0</h3>
+            <span class="plan-name">
+              Pleximo Free
+            </span>
+
+            <div class="price">
+              <span class="price-main">$0</span>
+            </div>
 
             <p class="price-note">
               Free forever
             </p>
+
           </div>
 
           <ul class="pricing-features">
@@ -420,13 +444,20 @@
           </div>
 
           <div class="pricing-card-top">
-            <span class="plan-name">Pleximo Pro</span>
 
-            <h3>One-time</h3>
+            <span class="plan-name">
+              Pleximo Pro
+            </span>
+
+            <div class="price">
+              <span class="price-main">$14.99</span>
+              <span class="price-currency">CAD</span>
+            </div>
 
             <p class="price-note">
-              One purchase. No subscription.
+              One-time purchase
             </p>
+
           </div>
 
           <ul class="pricing-features">

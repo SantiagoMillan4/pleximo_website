@@ -26,6 +26,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
@@ -67,11 +68,20 @@ a {
 
 
 /* ========================================
-   HEADER
+   STICKY HEADER
    ======================================== */
 
-header {
-  padding-top: 24px;
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: rgba(245, 247, 250, 0.78);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(226, 232, 240, 0.65);
 }
 
 nav {
@@ -79,12 +89,13 @@ nav {
   justify-content: space-between;
   align-items: center;
 
-  min-height: 64px;
+  min-height: 72px;
 }
 
 .brand {
   display: flex;
   align-items: center;
+
   gap: 10px;
 
   font-size: 20px;
@@ -131,7 +142,7 @@ nav {
 
 
 /* ========================================
-   LANGUAGE SWITCHER
+   LANGUAGE SWITCH
    ======================================== */
 
 .language-switch {
@@ -432,11 +443,11 @@ nav {
 
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 18px;
+  gap: 16px;
 }
 
 .feature-card {
-  padding: 28px;
+  padding: 24px;
 
   background: rgba(255, 255, 255, 0.72);
 
@@ -458,29 +469,38 @@ nav {
     0 16px 40px rgba(15, 23, 42, 0.06);
 }
 
+.feature-title {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 12px;
+}
+
 .feature-icon {
+  flex: 0 0 auto;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 42px;
-  height: 42px;
-
-  margin-bottom: 22px;
+  width: 38px;
+  height: 38px;
 
   background: var(--accent-soft);
   color: var(--accent);
 
-  border-radius: 12px;
+  border-radius: 11px;
 
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 700;
 }
 
 .feature-card h3 {
-  margin: 0 0 10px;
+  margin: 0;
 
-  font-size: 19px;
+  font-size: 18px;
   line-height: 1.25;
 
   letter-spacing: -0.025em;
@@ -492,7 +512,7 @@ nav {
   color: var(--muted);
 
   font-size: 14px;
-  line-height: 1.65;
+  line-height: 1.55;
 }
 
 
@@ -564,17 +584,35 @@ nav {
   font-weight: 700;
 }
 
-.pricing-card h3 {
-  margin: 14px 0 6px;
+.price {
+  display: flex;
+  align-items: baseline;
 
-  font-size: 38px;
+  gap: 8px;
+
+  margin-top: 14px;
+}
+
+.price-main {
+  font-size: 42px;
   line-height: 1;
 
-  letter-spacing: -0.045em;
+  font-weight: 700;
+
+  letter-spacing: -0.05em;
+}
+
+.price-currency {
+  color: var(--muted);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.04em;
 }
 
 .price-note {
-  margin: 0;
+  margin: 9px 0 0;
 
   color: var(--muted);
 
@@ -821,6 +859,10 @@ footer a:hover {
 
 @media (max-width: 600px) {
 
+  html {
+    scroll-padding-top: 76px;
+  }
+
   .container {
     width: min(100% - 28px, 1120px);
   }
@@ -828,12 +870,8 @@ footer a:hover {
 
   /* HEADER */
 
-  header {
-    padding-top: 12px;
-  }
-
   nav {
-    min-height: 58px;
+    min-height: 62px;
   }
 
   .brand-logo {
@@ -849,6 +887,10 @@ footer a:hover {
     gap: 12px;
   }
 
+  /*
+    Keep the sticky header clean on small phones.
+    Logo + Pleximo + language selector remain visible.
+  */
   .navlinks {
     display: none;
   }
@@ -892,7 +934,7 @@ footer a:hover {
   }
 
 
-  /* GENERAL */
+  /* GENERAL SECTIONS */
 
   .section {
     padding-top: 65px;
@@ -978,20 +1020,40 @@ footer a:hover {
   }
 
 
-  /* MORE FEATURES */
+  /* COMPACT FEATURES */
 
   .feature-grid {
     grid-template-columns: 1fr;
 
-    gap: 12px;
+    gap: 10px;
   }
 
   .feature-card {
-    padding: 24px;
+    padding: 18px 20px;
+  }
+
+  .feature-title {
+    gap: 10px;
+
+    margin-bottom: 8px;
   }
 
   .feature-icon {
-    margin-bottom: 18px;
+    width: 34px;
+    height: 34px;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+  }
+
+  .feature-card h3 {
+    font-size: 17px;
+  }
+
+  .feature-card p {
+    font-size: 13px;
+    line-height: 1.5;
   }
 
 
@@ -1007,8 +1069,8 @@ footer a:hover {
     padding: 30px 24px;
   }
 
-  .pricing-card h3 {
-    font-size: 34px;
+  .price-main {
+    font-size: 38px;
   }
 
   .pricing-bottom {
